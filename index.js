@@ -249,7 +249,7 @@ async function fakearResultados() {
 
 
 
-      fetch(" http://192.168.56.1:3000/api?consulta=datosCarrera", {
+      fetch(" DESKTOP-HR970B5:3000/api?consulta=datosCarrera", {
         method: "POST",
         body: JSON.stringify(raceData.results),
         headers: { "Content-type": "application/json; charset=UTF-8" }
