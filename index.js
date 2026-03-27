@@ -244,12 +244,12 @@ function saveResults() {
 
 async function fakearResultados() {
     raceData.results = JSON.parse(await readFile('./raceResult.json', 'utf8'));
-    while(true){
+   // while(true){
       //printResults();
 
 
 
-      fetch(" DESKTOP-HR970B5:3000/api?consulta=datosCarrera", {
+      fetch("http://localhost:3000/api?consulta=datosCarrera", {
         method: "POST",
         body: JSON.stringify(raceData.results),
         headers: { "Content-type": "application/json; charset=UTF-8" }
@@ -267,7 +267,7 @@ async function fakearResultados() {
 
 
       await sleep(3000);
-    }
+    //}
     
 }
 function sleep(ms) {
